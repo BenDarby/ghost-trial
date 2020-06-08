@@ -1,0 +1,40 @@
+{{!< default}}
+
+<div class="gh-page">
+    <div class="gh-container">
+        <h3>Featured Posts</h3>
+        <div class="gh-postfeed-intro">
+            {{#foreach posts from="1" to="4"}}
+
+                {{> "card-minor"}} {{!-- partials/card-minor.hbs --}}
+
+            {{/foreach}}
+        </div>
+    </div>
+
+    <div class="gh-postfeed" id="js-masonry">
+        <div class="masonry-columns"></div>
+        <div class="masonry-gutter"></div>
+        {{#foreach posts from="5"}}
+
+            {{> "card"}} {{!-- partials/card.hbs --}}
+
+        {{/foreach}}
+    </div>
+
+    <div class="gh-subscribe">
+        <div class="gh-container">
+            <div class="gh-subscribe-content">
+                <h2 class="gh-subscribe-title">Subscribe to our newsletter.</h2>
+                <p>Sign up with your email address to receive news and updates.</p>
+            </div>
+            <div class="gh-subscribe-form">
+                <div class="form-group">
+                    <label class="gh-label gh-label-hidden" for="subscribe" id="subscribe">Enter your email address</label>
+                    <input class="gh-input" type="text" name="subscribe" id="subscribe" placeholder="Email adress">
+                    <button type="submit" class="gh-button">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
